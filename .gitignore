@@ -1,0 +1,18 @@
+# Capas de instancia — datos privados de cada instalación. NUNCA entran al repo.
+# El kernel (capa 0) es lo único versionado; lo que cada organización genera
+# al usar el sistema (capas 1, 2 y 3) vive solo en su PC.
+
+org/*
+!org/users/
+org/users/*
+!org/users/LEEME.md
+
+clients/*
+!clients/LEEME.md
+
+bus/queues/*
+!bus/queues/LEEME.md
+bus/events/*
+!bus/events/LEEME.md
+
+bandeja/
