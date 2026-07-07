@@ -224,7 +224,7 @@ Espacio libre para cualquier cosa que no haya entrado en las secciones anteriore
 
 ## Que materializa este template (modelo de capas)
 
-> Seccion agregada 2026-07-02, ligada a `docs/26-riel-capas-contexto.md` (propuesta en discusion).
+> Ligada al modelo de capas: `docs/capas-contexto.md`.
 > Este template no es un cuestionario suelto: es el flujo que llena las capas de contexto del coordinador.
 
 | Parte del template | Capa que llena | Archivo resultante |
@@ -232,7 +232,7 @@ Espacio libre para cualquier cosa que no haya entrado en las secciones anteriore
 | 1 (identidad), 2 (modelo de trabajo), 3 (dolores), 5.1 y 5.3 (gobierno y datos sensibles), 6 (contexto adicional) | **Capa 1 — organizacion** | `org/context.md` |
 | 1.4 (quienes interactuan) + 5.2 (persona de referencia) | **Capa 2 — usuarios** | `org/users/<nombre>.md`, uno por persona, con su autoridad de aprobacion |
 | 2.1 (unidad de trabajo) | **Capa 3 — engagements** | define la forma de las carpetas de trabajo (`clients/`, `projects/`, `casos/`, segun la empresa) |
-| 2.3 (herramientas en uso) | Capa 1 — adapter de registro | que herramienta existente materializa el registro visible (equivalente al `clickup-map.md` de PRC) |
+| 2.3 (herramientas en uso) | Capa 1 — adapter de registro | que herramienta existente materializa el registro visible; se documenta en `docs/<herramienta>-map.md` |
 | 4 (agentes propuestos) | Capa 1 — equipo local | candidatos para el registro de agentes; ninguno nace sin aprobacion |
 
 La capa 0 (kernel) no se llena nunca: viaja identica a toda instalacion.

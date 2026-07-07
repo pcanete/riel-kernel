@@ -52,12 +52,12 @@ Antes de aprobarse, el agente debe poder responder:
 Estados posibles: `aprobado`, `revisar`, `rechazado`.
 Si `revisar`: ajusta y vuelve.
 
-Si aprobado: agregar al registro en `docs/agents-registry.md` y al mapa en `docs/10-mapa-equipo.md`.
+Si aprobado: agregar al registro de agentes de la organizacion en `org/context.md` (capa 1).
 
 ## Retiro de agentes
 
 Si un agente no recibe trabajo en varios ciclos, Riel propone retirarlo.
-Retiro = mover a la seccion "Retirados" del registry. No se borra el archivo.
+Retiro = mover a la seccion "Retirados" del registro en `org/context.md`. No se borra el archivo.
 
 ## Regla de autonomia
 
