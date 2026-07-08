@@ -10,8 +10,12 @@ No hace falta saber git — Claude Code lo opera por vos.
 2. **Abrir Claude Code en esa carpeta**.
 3. **Pegar este mensaje:**
 
-   > Cloná el repo público https://github.com/pcanete/riel-kernel directamente
-   > en esta carpeta (no en una subcarpeta). Si falta git, instalalo primero.
+   > Instalá en esta carpeta el sistema del repo público
+   > https://github.com/pcanete/riel-kernel — si falta git, instalalo primero.
+   > Los archivos del repo van en la raíz de esta carpeta, no en una subcarpeta.
+   > Si la carpeta no está vacía, integrá el repo sin pisar nada
+   > (git init + remote add + fetch + checkout) y no muevas los archivos
+   > existentes: riel los revisa con su dueño.
    > Cuando termine, leé el LEEME.md e invocá a riel: es una instalación nueva.
 
 4. **Riel arranca solo.** No hay formulario ni entrevista larga: pregunta lo mínimo (quién sos, qué hace la organización, qué te duele hoy) y el resto lo aprende durante el trabajo real.

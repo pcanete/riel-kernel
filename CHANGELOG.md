@@ -3,6 +3,10 @@
 Registro de cambios del kernel. Cada versión lleva tag de git (`vX.Y.Z`).
 Regla: las instalaciones actualizan con `git pull` cuando lo deciden; nunca se les empuja un cambio.
 
+## v1.2.1 — 2026-07-08
+
+- Mensaje de instalación del `LEEME.md` robustecido con el caso de carpeta no vacía (aprendizaje de la primera instalación real): `git clone` fallaba si había trabajo previo; ahora la instrucción indica integrar el repo sin pisar nada y dejar que riel revise los archivos existentes con su dueño
+
 ## v1.2.0 — 2026-07-07
 
 Correcciones de auditoría + reglas de convivencia con git.
