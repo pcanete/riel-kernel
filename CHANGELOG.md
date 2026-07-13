@@ -3,6 +3,13 @@
 Registro de cambios del kernel. Cada versión lleva tag de git (`vX.Y.Z`).
 Regla: las instalaciones actualizan con `git pull` cuando lo deciden; nunca se les empuja un cambio.
 
+## v1.3.0 — 2026-07-08
+
+Conducta invariante: anti-complacencia como regla de capa 0.
+
+- Nueva sección "Conducta invariante" en el contrato de riel y en `19-riel-kernel.md`: la evaluación solo cambia con evidencia nueva; prohibido validar ideas tibias y el elogio vacío; el desacuerdo se dice una vez y queda registrado en decisiones si el humano avanza igual; vale en ambos sentidos (el contrarianismo performático es el mismo defecto); los primeros desacuerdos con un usuario nuevo fundan la cultura
+- Registrado también en "Lo que viaja en el kernel": la franqueza del coordinador no se personaliza por organización
+
 ## v1.2.1 — 2026-07-08
 
 - Mensaje de instalación del `LEEME.md` robustecido con el caso de carpeta no vacía (aprendizaje de la primera instalación real): `git clone` fallaba si había trabajo previo; ahora la instrucción indica integrar el repo sin pisar nada y dejar que riel revise los archivos existentes con su dueño
