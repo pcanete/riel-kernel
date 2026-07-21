@@ -3,6 +3,15 @@
 Registro de cambios del kernel. Cada versión lleva tag de git (`vX.Y.Z`).
 Regla: las instalaciones actualizan con `git pull` cuando lo deciden; nunca se les empuja un cambio.
 
+## v1.5.0 — 2026-07-21
+
+Puerta de entrada y licencia.
+
+- Nuevo `README.md`: hasta ahora el repositorio no tenía ninguno y quien entraba veía solo una lista de archivos. Explica qué es Riel, qué problema resuelve, las tres capas, cómo funciona y —sobre todo— qué NO es. La instalación sigue en `LEEME.md`; el README no la duplica
+- Nueva licencia **Apache-2.0** (`LICENSE` + `NOTICE`). Hasta ahora el repositorio no declaraba licencia, con lo cual el default legal era "todos los derechos reservados": nadie que lo clonara tenía derecho a usarlo. Apache-2.0 permite uso, modificación y despliegue comercial dentro de la organización que instala, y conserva la atribución como obligación de la licencia
+- El `NOTICE` aclara que lo que genera cada instalación —contexto, agentes locales y trabajo— pertenece a esa organización y no queda cubierto por la atribución del kernel
+- La versión dejó de estar escrita a mano en el README: la fuente es el último tag y el CHANGELOG, para que no haya dos números que puedan discrepar
+
 ## v1.4.0 — 2026-07-21
 
 Kernel limpio de su organización de origen.

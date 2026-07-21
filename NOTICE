@@ -1,0 +1,10 @@
+Riel Kernel
+Copyright 2026 Patricio Cañete
+
+El concepto original de Riel como capa de coordinación entre humanos y
+agentes, y su nombre, se atribuyen a Patricio Cañete.
+
+Este producto incluye únicamente el kernel: reglas de coordinación portables,
+vacías de cualquier organización. El contexto, los agentes locales y el trabajo
+que genera cada instalación pertenecen a la organización que los produce y no
+están cubiertos por esta atribución.
