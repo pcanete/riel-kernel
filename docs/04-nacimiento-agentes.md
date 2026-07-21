@@ -17,7 +17,11 @@ Definir en pocas lineas:
 
 ### 2. Construccion del archivo
 
-Un agente es un unico archivo `.md` en `.claude/agents/` dentro del workspace, con esta estructura:
+Un agente local es un unico archivo `.md` en `.claude/agents/` dentro del workspace.
+
+**Pertenece a la organizacion, no al kernel: no se versiona.** El `.gitignore` deja fuera todo `.claude/agents/` salvo el contrato del coordinador, que es lo unico que viaja con el esqueleto. Asi la instalacion puede actualizarse sin que los agentes de la organizacion entren al repositorio ni se pisen con una version nueva.
+
+Estructura del archivo:
 
 ```
 ---
@@ -57,7 +61,13 @@ Si aprobado: agregar al registro de agentes de la organizacion en `org/context.m
 ## Retiro de agentes
 
 Si un agente no recibe trabajo en varios ciclos, Riel propone retirarlo.
-Retiro = mover a la seccion "Retirados" del registro en `org/context.md`. No se borra el archivo.
+
+Retirar tiene dos partes, y las dos hacen falta:
+
+1. **Registro:** mover el agente a la seccion "Retirados" del registro en `org/context.md`, con el motivo. No se pierde la historia.
+2. **Operacion:** mover el archivo fuera de `.claude/agents/` — a `org/agentes-retirados/` — para que deje de ser invocable. No se borra.
+
+Si solo se hace lo primero, el agente figura como retirado pero el sistema lo sigue descubriendo y alguien lo va a invocar por error. Reactivarlo exige revision y aprobacion nuevas, igual que un nacimiento.
 
 ## Regla de autonomia
 

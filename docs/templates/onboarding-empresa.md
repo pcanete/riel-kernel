@@ -88,6 +88,24 @@ Listar las herramientas con las que ya trabaja la empresa y que no se van a reem
 
 > Hint: planillas, mail, whatsapp, CRM, ERP, sistemas propios, carpetas compartidas, etc. No hace falta integrar todo: basta con saber que existe.
 
+## 2.4 Donde queda visible el trabajo (superficie compartida)
+
+De las herramientas de 2.3, cual es la que el equipo mira para saber que esta pasando.
+
+- Herramienta o lugar:
+- Quienes tienen acceso:
+- Que se espera encontrar ahi (estado, decisiones, entregables, todo):
+
+> Hint: esta es la respuesta mas importante de la Parte 2. Define donde queda visible el trabajo
+> para el resto de la organizacion, no solo para quien lo hizo. Puede ser un gestor de proyectos,
+> un wiki interno, los proyectos de cada cliente o una carpeta compartida.
+>
+> Si la respuesta es "no tenemos", no inventar una herramienta: nombrarlo como hallazgo. Un sistema
+> donde el unico registro queda en el disco de una persona muere con esa maquina y deja afuera al
+> resto del equipo. Ver "Donde vive el trabajo" en `19-riel-kernel.md`.
+>
+> El coordinador nunca escribe ahi por su cuenta: propone que registrar y espera aprobacion.
+
 ---
 
 # Parte 3 — Dolores y oportunidades (obligatorio)
@@ -231,8 +249,8 @@ Espacio libre para cualquier cosa que no haya entrado en las secciones anteriore
 |--------------------|----------------|--------------------|
 | 1 (identidad), 2 (modelo de trabajo), 3 (dolores), 5.1 y 5.3 (gobierno y datos sensibles), 6 (contexto adicional) | **Capa 1 — organizacion** | `org/context.md` |
 | 1.4 (quienes interactuan) + 5.2 (persona de referencia) | **Capa 2 — usuarios** | `org/users/<nombre>.md`, uno por persona, con su autoridad de aprobacion |
-| 2.1 (unidad de trabajo) | **Capa 3 — engagements** | define la forma de las carpetas de trabajo (`clients/`, `projects/`, `casos/`, segun la empresa) |
-| 2.3 (herramientas en uso) | Capa 1 — adapter de registro | que herramienta existente materializa el registro visible; se documenta en `docs/<herramienta>-map.md` |
+| 2.1 (unidad de trabajo) | **Capa 3 — engagements** | define la forma de las carpetas de trabajo dentro de `clients/`, con el tipo declarado en el contexto de cada unidad |
+| 2.3 y 2.4 (herramientas y visibilidad) | Capa 1 — superficie compartida | que herramienta existente materializa el registro visible; se documenta en `org/docs/<herramienta>-map.md`, fuera del versionado |
 | 4 (agentes propuestos) | Capa 1 — equipo local | candidatos para el registro de agentes; ninguno nace sin aprobacion |
 
 La capa 0 (kernel) no se llena nunca: viaja identica a toda instalacion.

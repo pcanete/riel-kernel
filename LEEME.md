@@ -32,7 +32,7 @@ Cuando haya una versión nueva del kernel, pegale esto a Claude Code en la carpe
 
 > Actualizá el sistema: hacé git pull del kernel y contame qué cambió (mirá el CHANGELOG.md).
 
-Tus datos (`org/`, `clients/`, `bus/`) no se tocan: la actualización solo trae mejoras del esqueleto. Nadie te empuja cambios — actualizás cuando vos querés.
+Nada de lo tuyo se toca: tu contexto (`org/`, incluida tu documentación en `org/docs/`), tu trabajo (`clients/`), tus mensajes (`bus/`) y los agentes que hayas creado están fuera del versionado. La actualización solo trae mejoras del esqueleto. Nadie te empuja cambios — actualizás cuando vos querés.
 
 ## Lo que NO se hace el primer día
 

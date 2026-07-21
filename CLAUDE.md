@@ -5,13 +5,21 @@ Este workspace es la base operativa del sistema agéntico de la organización.
 ## Estructura
 
 ```
-.claude/agents/    → agentes del sistema (arranca solo con riel)
-org/               → capa 1 (context.md) y capa 2 (users/)
-clients/           → trabajo real por unidad (cliente, proyecto o caso)
-bus/queues/        → mensajes entre agentes (.ndjson, append-only)
-bus/events/        → detalle de eventos registrados
-docs/              → documentación del sistema
+KERNEL — viaja con el sistema, se actualiza, no se edita
+  .claude/agents/riel.md   contrato del coordinador
+  docs/                    documentación del sistema
+  CLAUDE.md, LEEME.md      reglas del workspace e instalación
+
+ORGANIZACIÓN — lo genera esta instalación, nunca sube al repositorio
+  org/context.md           capa 1: qué hace la organización, cómo decide
+  org/users/               capa 2: quién opera el sistema y qué puede aprobar
+  org/docs/                documentación propia de la organización
+  .claude/agents/*.md      agentes locales (todos menos riel.md)
+  clients/<unidad>/        capa 3: trabajo real
+  bus/                     mensajes entre agentes (.ndjson, append-only)
 ```
+
+**La línea entre los dos bloques es lo que permite actualizar sin riesgo.** Todo lo del segundo bloque está fuera del versionado: `git pull` no lo toca y nunca viaja a un repositorio público.
 
 ## Regla de paths
 
@@ -20,8 +28,11 @@ El único ancla es la raíz de este workspace: todo path del sistema es relativo
 ## Reglas de escritura
 
 - Todo trabajo de cliente/proyecto va en `clients/<unidad>/`
+- Toda documentación propia de la organización va en `org/docs/`, nunca en `docs/`
+- Todo agente local nace en `.claude/agents/` y no se versiona; el único versionado es `riel.md`
 - Todo mensaje entre agentes va en `bus/queues/<agente>.ndjson` (append-only)
 - Las conversaciones son contexto — el trabajo queda en archivos
+- **Lo que la organización necesita ver no se queda solo en disco:** va a su superficie compartida, propuesto y aprobado (ver "Dónde vive el trabajo" en `docs/19-riel-kernel.md`)
 - Prioridad de verdad: archivos canónicos > archivos del agente > conversaciones
 
 ## Kernel y actualizaciones

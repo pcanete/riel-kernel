@@ -6,4 +6,6 @@
 4. [templates/onboarding-empresa.md](templates/onboarding-empresa.md) — checklist interno del coordinador para instalar las capas 1 y 2, progresivamente durante trabajo real
 5. [mapa-sistema-agentico.md](mapa-sistema-agentico.md) — conecta los conceptos de IA con las piezas concretas de este sistema; guía para usuarios nuevos
 
-La documentación de esta organización crece acá a medida que el sistema opera. Regla: toda decisión importante debe ser explicable en una pantalla.
+**Esta carpeta es del kernel: llega con el sistema y se actualiza con él.** No escribas acá documentación propia de la organización — se pisaría en la próxima actualización y viajaría a un repositorio público. La documentación de la organización va en `org/docs/`, que está fuera del versionado. Lo que la organización necesita ver vive además en su superficie compartida (ver "Dónde vive el trabajo" en `19-riel-kernel.md`).
+
+Regla: toda decisión importante debe ser explicable en una pantalla.

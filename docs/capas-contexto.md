@@ -7,7 +7,7 @@ El sistema separa su núcleo invariante del contexto que cambia según dónde es
 | Capa | Qué contiene | Dónde vive |
 |------|-------------|------------|
 | **0 — Kernel** | Reglas invariantes de coordinación: clasificación de pedidos, niveles de aprobación, prioridad de verdad, criterio de simplicidad | `docs/19-riel-kernel.md` + contrato de riel |
-| **1 — Organización** | Qué hace la organización, cómo decide, riesgos, herramientas, adapter de registro, equipo de agentes locales | `org/context.md` |
+| **1 — Organización** | Qué hace la organización, cómo decide, riesgos, herramientas, superficie compartida donde queda visible el trabajo, equipo de agentes locales | `org/context.md`, su documentación en `org/docs/`, sus agentes en `.claude/agents/` |
 | **2 — Usuarios** | Quién opera el sistema, qué puede aprobar, cómo prefiere trabajar, feedback acumulado | `org/users/<nombre>.md` (uno por persona) |
 | **3 — Engagements** | Clientes, proyectos o casos: contexto retomable, decisiones, loops abiertos, lo producido | `clients/<unidad>/` |
 

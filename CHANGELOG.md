@@ -3,6 +3,28 @@
 Registro de cambios del kernel. Cada versión lleva tag de git (`vX.Y.Z`).
 Regla: las instalaciones actualizan con `git pull` cuando lo deciden; nunca se les empuja un cambio.
 
+## v1.6.0 — 2026-07-21
+
+Separación real entre kernel e instalación, y doctrina de dónde vive el trabajo.
+
+**Lo que la instalación genera deja de mezclarse con el esqueleto**
+
+- `.gitignore`: los agentes locales dejan de versionarse. Nacen en `.claude/agents/` y pertenecen a la organización; el único contrato que viaja con el kernel es `riel.md`. Hasta ahora un agente creado durante el trabajo aparecía como archivo del repositorio
+- La documentación propia de la organización se muda de `docs/` a `org/docs/`, fuera del versionado. `docs/` pasa a ser explícitamente del kernel: `00-indice.md` ahora lo dice y advierte que escribir ahí se pisa en la próxima actualización
+- `CLAUDE.md` reescribió su mapa de estructura en dos bloques —lo que viaja y lo que genera la instalación— porque esa línea es exactamente lo que permite actualizar sin riesgo
+- Eliminada del `.gitignore` una entrada residual de la organización que creó el kernel, que ignoraba una carpeta inexistente en el repositorio
+- El retiro de agentes pasó a tener dos partes obligatorias: registro en `org/context.md` y **retiro operativo** moviendo el archivo a `org/agentes-retirados/`. Antes el agente figuraba como retirado pero el sistema lo seguía descubriendo, y alguien lo iba a invocar por error
+
+**Nueva doctrina: "Dónde vive el trabajo"**
+
+- Sección nueva en `19-riel-kernel.md` y en el contrato del coordinador. La separación: **local se ejecuta, compartido se ve.** Código, contenidos y borradores viven en disco; contexto, decisiones, estado y resultados van a la superficie compartida de la organización para servir de fuente unificada
+- Criterio operativo: si otra persona necesita eso para trabajar o para retomar, va a la superficie compartida; si solo esta máquina lo necesita para ejecutar, se queda local
+- El kernel no impone herramienta — exige que exista una y que el coordinador sepa cuál es. Nuevo punto 2.4 en el checklist de onboarding para declararla, con instrucción de nombrarlo como hallazgo si la organización no tiene ninguna
+- **Destino no es automatismo:** el coordinador nunca escribe solo en la superficie compartida. Propone qué va a registrar y espera aprobación. Lo que no se negocia es el destino. Esto reemplaza el "no registrar por defecto" del cierre de sesión, que empujaba en la dirección contraria
+- El coordinador además le explica esto al usuario: es la diferencia entre usar agentes para acelerar tareas propias y montar un sistema del que el equipo entero puede trabajar
+
+**Nota para instalaciones existentes:** `.gitignore` no deja de rastrear lo que ya estaba rastreado. Si una instalación ya había commiteado agentes locales o documentación propia, hay que sacarlos del índice con `git rm --cached <archivo>` una sola vez. Las instalaciones nuevas no necesitan hacer nada.
+
 ## v1.5.0 — 2026-07-21
 
 Puerta de entrada y licencia.

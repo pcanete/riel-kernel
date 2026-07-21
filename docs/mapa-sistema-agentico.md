@@ -19,9 +19,9 @@ El principio de fondo: **el modelo es reemplazable; el sistema permanece.**
 | Roles, objetivos y grados de libertad | El contrato `.md` de cada agente en `.claude/agents/` |
 | Instrucciones y habilidades (skills) | Contratos + skills externas que se invocan cuando hacen falta |
 | Herramientas, conectores y aplicaciones | Los tools de cada contrato y los conectores (MCP) de la instalación |
-| Canales de entrada y salida | El bus (`bus/queues/`) y el adapter de registro de la organización |
+| Canales de entrada y salida | El bus (`bus/queues/`) y la superficie compartida de la organización |
 | Autonomía y puntos de control humano | Los niveles de aprobación 0 / 1 / 2 |
-| Contexto, dossiers y playbooks | Las capas 0–3 y las carpetas de trabajo (`org/`, `clients/`, `docs/`) |
+| Contexto, dossiers y playbooks | Las capas 0–3: `org/` (organización y su documentación) y `clients/` (trabajo) |
 | Memoria y aprendizaje operativo | `context.md`, `open-loops.md` y `session-log.md` de cada engagement |
 
 ## La escala de adopción (dónde está cada usuario)

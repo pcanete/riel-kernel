@@ -1,18 +1,31 @@
 # Capas de instancia — datos privados de cada instalación. NUNCA entran al repo.
 # El kernel (capa 0) es lo único versionado; lo que cada organización genera
 # al usar el sistema (capas 1, 2 y 3) vive solo en su PC.
+#
+# Regla: si un archivo lo produjo la organización usando el sistema, no se
+# versiona. Si vino con el kernel, no se edita.
 
+# Capa 1 — organización: contexto, documentación propia, mapas de herramientas
 org/*
 !org/users/
 org/users/*
 !org/users/LEEME.md
 
+# Capa 3 — trabajo por unidad
 clients/*
 !clients/LEEME.md
 
+# Bus de mensajes entre agentes
 bus/queues/*
 !bus/queues/LEEME.md
 bus/events/*
 !bus/events/LEEME.md
 
-bandeja/
+# Agentes locales: nacen en la instalación cuando una función se repite y
+# pertenecen a la organización, no al kernel. El único agente versionado es
+# el coordinador, que viaja con el esqueleto.
+.claude/agents/*
+!.claude/agents/riel.md
+
+# Configuración local de la herramienta
+.claude/settings.local.json

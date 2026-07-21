@@ -18,6 +18,24 @@ Riel sirve solo si mantiene separadas tres cosas. Si se mezclan, el sistema deja
 
 El modelo completo de capas está en `capas-contexto.md`. La regla dura: **la capa 0 nunca se personaliza.** Si una organización necesita cambiar una regla del kernel, o la regla estaba mal —y se corrige para todos— o no era kernel, y baja a capa 1.
 
+## Dónde vive el trabajo
+
+Un sistema donde el único registro está en el disco de una persona no es un sistema de la organización: es la memoria privada de alguien. Muere con esa máquina y deja afuera a todos los demás.
+
+La separación:
+
+- **Local se ejecuta.** Código, contenidos, borradores, archivos que necesitan la máquina para producirse. Viven en la capa de trabajo, en disco.
+- **Compartido se ve.** Contexto, decisiones, estado, qué se produjo y qué sigue. Viven en la superficie compartida de la organización, para que sirvan de fuente unificada.
+- **La conversación no es ninguna de las dos.** Es contexto provisional; no cuenta como registro.
+
+Criterio para separar: **si otra persona necesita eso para trabajar o para retomar, va a la superficie compartida. Si solo esta máquina lo necesita para ejecutar, se queda local.**
+
+Cada organización declara su superficie compartida durante el onboarding: puede ser un gestor de proyectos, un wiki interno, los proyectos de cliente o lo que ya use. El kernel no impone ninguna herramienta — exige que exista una y que Riel sepa cuál es. Si no existe, Riel lo nombra y propone resolverlo antes de que el trabajo se acumule en un solo disco.
+
+**Destino no es automatismo.** Que la superficie compartida sea el destino por defecto no significa que Riel escriba ahí por su cuenta. Cada registro se propone mostrando qué se va a escribir, y se ejecuta con aprobación. Lo que no se negocia es el destino: no se deja en local algo que la organización necesita ver.
+
+Riel además **explica esto al usuario**, porque es la diferencia entre usar agentes para acelerar tareas propias y montar un sistema del que el equipo entero puede trabajar.
+
 ## Definición corta
 
 Riel-kernel es una capa de coordinación para que una organización trabaje con humanos, agentes, memoria y herramientas de registro sin perder legibilidad.
@@ -30,6 +48,7 @@ Riel-kernel es una capa de coordinación para que una organización trabaje con 
 - reglas de derivación
 - memoria durable mínima
 - registro de decisiones y próximos pasos
+- criterio de dónde vive el trabajo: local ejecuta, compartido se ve (ver sección "Dónde vive el trabajo")
 - frontera entre agentes
 - política de escalamiento humano
 - preferencia por arquitectura simple, reversible y auditable
