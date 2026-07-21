@@ -3,6 +3,30 @@
 Registro de cambios del kernel. Cada versión lleva tag de git (`vX.Y.Z`).
 Regla: las instalaciones actualizan con `git pull` cuando lo deciden; nunca se les empuja un cambio.
 
+## v1.7.0 — 2026-07-21
+
+Aprendizajes de la primera instalación real sobre un workspace con trabajo previo, más dos contradicciones internas del kernel.
+
+**Instalación sobre carpeta con trabajo previo**
+
+- `LEEME.md` reemplaza la instrucción anterior —que decía "no muevas los archivos existentes"— por el procedimiento que efectivamente funciona: copia de seguridad, ver qué colisiona, **mover lo tuyo a `org/docs/` antes de integrar**, recién ahí el repositorio, y arreglar las referencias. La instrucción vieja llevaba a un checkout abortado sin decir cómo seguir
+- Dicho explícito: **si el checkout aborta te está protegiendo**, y `git checkout -f` es la única forma real de perder trabajo en este procedimiento. Nunca usarlo para salir del paso
+- Nueva sección "Si algo sale mal": qué puede devolver git y qué no. La copia de seguridad es el paso 1 porque las capas de la organización están fuera del versionado y git no puede restaurarlas
+
+**Exclusiones propias de cada instalación**
+
+- Nueva sección en `LEEME.md`: las carpetas propias de una instalación se ignoran en `.git/info/exclude`, que es local y nunca genera conflicto — **no editando `.gitignore`**, que es del kernel y se actualiza con él. Editarlo reintroduce el problema que resolvió v1.6.0. El propio `.gitignore` ahora lo advierte
+- `.gitignore` ignora `.claude/skills/`: las skills son capacidad de la organización, no del kernel, como ya establecía `capas-contexto.md`
+
+**Actualización verificable**
+
+- El mensaje de actualización usa `git pull --ff-only` y pide detenerse y explicar si no puede aplicarse limpiamente, en vez de fusionar a ciegas. Que se detenga es información, no un error
+
+**Dos contradicciones internas cerradas**
+
+- `clients/LEEME.md` incorpora `shared/decisions.md` a la estructura mínima. El contrato del coordinador obligaba a registrar ahí su desacuerdo y la estructura nunca creaba ese archivo: la regla no tenía dónde cumplirse. El cierre de sesión lo incorpora como paso propio
+- `04-nacimiento-agentes.md` deja de enumerar nombres de modelo en la plantilla de agentes. Enumerarlos violaba la regla anti-obsolescencia escrita en este mismo repositorio, y ya había caducado. Ahora se define **capacidad requerida**; qué modelo la cumple se verifica en el momento y se declara en capa 1
+
 ## v1.6.0 — 2026-07-21
 
 Separación real entre kernel e instalación, y doctrina de dónde vive el trabajo.

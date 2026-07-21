@@ -27,5 +27,13 @@ bus/events/*
 .claude/agents/*
 !.claude/agents/riel.md
 
+# Skills instaladas: son capacidad de la organización, no del kernel
+# (ver docs/capas-contexto.md, "Skills: capacidad, no contexto")
+.claude/skills/
+
 # Configuración local de la herramienta
 .claude/settings.local.json
+
+# Para ignorar carpetas propias de TU instalación no edites este archivo:
+# usá .git/info/exclude, que es local y nunca entra en conflicto al actualizar.
+# Ver LEEME.md, "Exclusiones propias de tu instalación".

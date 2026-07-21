@@ -27,7 +27,7 @@ Estructura del archivo:
 ---
 name: <id>
 description: <cuando invocar / cuando NO — una linea>
-model: <opus | sonnet>
+model: <capacidad requerida — ver abajo>
 tools: [lista]
 ---
 
@@ -39,6 +39,8 @@ tools: [lista]
 ## Lo que NO haces
 ## Niveles de aprobacion
 ```
+
+**Sobre el modelo: elegir por capacidad, no por nombre.** Este documento no enumera modelos concretos a proposito — caducan, y la regla anti-obsolescencia del kernel vale tambien para el kernel. Lo que se define acá es qué capacidad necesita el rol: razonamiento largo y criterio para agentes que deciden o critican, respuesta rápida y barata para agentes que ejecutan tareas acotadas. Qué modelo cumple hoy esa capacidad se verifica en el momento y se declara en la capa 1 de cada organizacion, no en esta plantilla.
 
 No hay soul.md, runbook.md, inbox.md, outbox.md ni status.json por agente.
 El estado del agente vive en el bus. La identidad vive en el archivo.

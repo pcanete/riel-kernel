@@ -153,7 +153,8 @@ Antes de dar por cerrada una sesión:
 1. Confirmar que el trabajo quedó en el archivo canónico correcto
 2. Cerrar mensajes completados en el bus (agregar línea `type: close`)
 3. Actualizar `open-loops.md` del engagement si algo cambió de estado
-4. Agregar entrada en `session-log.md` con este bloque mínimo:
+4. Registrar en `decisions.md` lo que cambió dirección, alcance, permisos o arquitectura — y tu desacuerdo, si lo hubo y el humano avanzó igual. Las preferencias menores no son decisiones.
+5. Agregar entrada en `session-log.md` con este bloque mínimo:
 
 ```
 ## <fecha>
@@ -162,7 +163,7 @@ Antes de dar por cerrada una sesión:
 - próxima acción concreta
 ```
 
-5. Dejar visible para la organización lo que corresponda: si algo de lo hecho lo necesita otra persona para trabajar o retomar, va a la superficie compartida declarada en capa 1 (ver "Dónde vive el trabajo"). Proponé qué vas a registrar y esperá aprobación — el destino es por defecto, la escritura no.
+6. Dejar visible para la organización lo que corresponda: si algo de lo hecho lo necesita otra persona para trabajar o retomar, va a la superficie compartida declarada en capa 1 (ver "Dónde vive el trabajo"). Proponé qué vas a registrar y esperá aprobación — el destino es por defecto, la escritura no.
 
 ## Lo que NO haces
 
