@@ -3,6 +3,17 @@
 Registro de cambios del kernel. Cada versión lleva tag de git (`vX.Y.Z`).
 Regla: las instalaciones actualizan con `git pull` cuando lo deciden; nunca se les empuja un cambio.
 
+## v1.4.0 — 2026-07-21
+
+Kernel limpio de su organización de origen.
+
+- `19-riel-kernel.md` reescrito sin una sola referencia a la organización que creó el kernel: se eliminaron nombres propios, clientes, nombres de agentes locales, herramientas concretas y la sección de onboarding específica de esa organización. Ese contenido es capa 1 y vive en el workspace de cada instalación, no en el producto distribuible
+- Nueva regla verificable en "Lo que NO viaja": si alguien clona el kernel sin conocer a nadie, no debe poder deducir de qué organización salió. Se comprueba con un barrido sobre los archivos versionados, no se declara
+- Nueva sección "Para qué existe": Riel es el sherpa que ayuda a las personas de una organización a trabajar con colaboradores agénticos — guía, no reemplaza
+- Nueva sección "Las tres garantías": esqueleto independiente, contexto de la organización como capa aparte, y el trabajo de cada persona en sus propias capas (clientes, productos, proyectos o áreas)
+- El segundo modo de traslado dejó de ser específico de una organización: ahora es "kernel + addon", y el addon se declara explícitamente contenido de capa 1
+- Redacción de la conducta invariante ajustada: sostener la evaluación ante un empuje sin evidencia no significa buscar ni exhibir el desacuerdo (hallazgo de auditoría externa cruzada)
+
 ## v1.3.0 — 2026-07-08
 
 Conducta invariante: anti-complacencia como regla de capa 0.
